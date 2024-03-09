@@ -6,7 +6,7 @@ import psycopg2
 import os
 
 # connecting to the database - replace the SERVICE URI with the service URI
-conn = psycopg2.connect("postgres://avnadmin:AVNS_nHR6CTga0AQ2C57qKkK@pg-23f81deb-harirenjith123face.a.aivencloud.com:20445/defaultdb?sslmode=require")
+conn = psycopg2.connect("<SERVICE_URI>")
 
 for filename in os.listdir("stored-faces"):
     # opening the image
