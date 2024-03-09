@@ -7,10 +7,11 @@ import os
 
 # connecting to the database - replace the SERVICE URI with the service URI
 conn = psycopg2.connect("postgres://avnadmin:AVNS_nHR6CTga0AQ2C57qKkK@pg-23f81deb-harirenjith123face.a.aivencloud.com:20445/defaultdb?sslmode=require")
+stored_faces_dir = "D:/extra/ai_detected_images/src/stored-faces"
 
-for filename in os.listdir("stored-faces"):
+for filename in os.listdir("D:/extra/ai_detected_images/stored-faces"):
     # opening the image
-    img = Image.open("stored-faces/" + filename)
+    img = Image.open("D:/extra/ai_detected_images/stored-faces/" + filename)
     # loading the `imgbeddings`
     ibed = imgbeddings()
     # calculating the embeddings
