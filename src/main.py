@@ -25,7 +25,7 @@ def cosine_similarity(embedding1, embedding2):
 def check_matched_image(frame_embedding, threshold=0.90):
     try:
         # Connect to the PostgreSQL database
-        conn = psycopg2.connect("<SERVICE_URI>")
+        conn = psycopg2.connect("postgres://avnadmin:AVNS_nHR6CTga0AQ2C57qKkK@pg-23f81deb-harirenjith123face.a.aivencloud.com:20445/defaultdb?sslmode=require")
 
         # Create a cursor object
         cur = conn.cursor()
